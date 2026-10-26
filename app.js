@@ -59,6 +59,10 @@ class GestorDeTareas {
   }
 
   agregarTarea(nombre) {
+    if (this.lista.querySelector('.edicion')) {
+      this.mostrarMensaje('Guarda o cancela la edición antes de agregar otra tarea.');
+      return false;
+    }
     const limpio = nombre.trim();
     if (!limpio) {
       this.mostrarMensaje('Escribe una tarea antes de agregarla.');
