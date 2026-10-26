@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#193d50">
+  <title>Mis tareas</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="encabezado">
+    <div class="ancho">
+      <h1>Mis tareas</h1>
+      <p>Organiza tus tareas pendientes.</p>
+    </div>
+  </header>
+
+  <main class="ancho contenido">
+    <section class="panel" aria-labelledby="titulo-nueva">
+      <h2 id="titulo-nueva">Nueva tarea</h2>
+      <form id="formulario-tarea" novalidate>
+        <label for="nueva-tarea">Nombre de la tarea</label>
+        <div class="fila-formulario">
+          <input type="text" id="nueva-tarea" maxlength="120" placeholder="Ej. Revisar apuntes" autocomplete="off">
+          <button type="submit" class="boton principal">Agregar tarea</button>
+        </div>
+        <p id="mensaje" class="mensaje" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section class="panel" aria-labelledby="titulo-lista">
+      <div class="cabecera-lista">
+        <h2 id="titulo-lista">Lista de tareas</h2>
+        <p id="resumen" class="resumen">0 pendientes · 0 completadas</p>
+      </div>
+      <p id="sin-tareas" class="sin-tareas">Aún no hay tareas.</p>
+      <ul id="lista-tareas" class="lista"></ul>
+    </section>
+  </main>
+</body>
+</html>
